@@ -1,0 +1,2 @@
+module NebulaHelper
+end

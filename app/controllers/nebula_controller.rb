@@ -1,0 +1,2 @@
+class NebulaController < ApplicationController
+end
