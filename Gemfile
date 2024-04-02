@@ -50,6 +50,9 @@ gem "bootsnap", require: false
 # For application jobs
 gem "solid_queue"
 
+# For faking the database seeds
+gem 'faker'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
