@@ -6,6 +6,6 @@ Tailwind inserted during the Rails new command, there is opportunity for incorpo
 
 Contains Solid Queue for jobs.
 
-Definitely intend on using Hotwire with Stimulus and Turbo featuring in the application, there is potential for using an external JS framework such as React or Vue, depending on how it will interact with the application and Hotwire.
+Definitely intend on using Hotwire with Stimulus and Turbo featuring in the application.
 
 Will be utilising commonly used gems such as Devise and Simple Form, along with gems for charts and other functionalities.
