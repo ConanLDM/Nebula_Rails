@@ -9,3 +9,5 @@ Contains Solid Queue for jobs.
 Definitely intend on using Hotwire with Stimulus and Turbo featuring in the application.
 
 Will be utilising commonly used gems such as Devise and Simple Form, along with gems for charts and other functionalities.
+
+Recent changes: Incorporated Devise into the project for user authentication.
