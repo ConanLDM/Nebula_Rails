@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   resources :nebula
 
-  root to: 'nebula#index'
+  root to: 'nebula#home'
 end
