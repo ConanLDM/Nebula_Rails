@@ -17,3 +17,5 @@ Recent changes:
 Incorporated Devise into the project for user authentication. 
 
 Login screens along with Devise related notices and flashes added to the application.
+
+Introduced Cloudinary for handling external media importing to the application (keeping the application file size from expanding due to large media files).
