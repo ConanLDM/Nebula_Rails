@@ -1,2 +1,11 @@
-<%= image_tag "nebula.jpg" %>
 <h1>Nebula Home</h1>
+<%= cl_image_tag("samples/landscapes/landscape-panorama",
+      width: 400, height: 300, crop: :fill) %>
+<%= cl_video_tag("samples/sea-turtle",
+  :loop => true, :controls => true,
+  :transformation => [
+    :height=>360, :width=>480, :crop=>"scale",
+    :quality=>70, :duration=>"10"],
+    :border=>"5px_solid_lightblue",
+  :fallback_content => "Your browser does not support HTML5 video tags." ) %>
+<%= image_tag "nebula.jpg" %>
