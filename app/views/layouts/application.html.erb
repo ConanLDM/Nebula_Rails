@@ -12,9 +12,6 @@
 <body>
   <%= render "shared/navbar" %>
   <ul class="navbar-nav mr-auto">
-    <li class="nav-item active">
-      <a class="nav-link" href="/nebula_thoughts">Nebula Thoughts</a>
-    </li>
     <p class="navbar-text float-right">
       <% if user_signed_in? %>
         Logged in as <strong><%= current_user.email %></strong>.

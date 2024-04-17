@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+ .nebula {
+  background-color: #f9f9f9;
+  padding: 20px; /* Add some padding for spacing */
+}
+
+.nebula h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #333;
+}
