@@ -19,3 +19,5 @@ Incorporated Devise into the project for user authentication.
 Login screens along with Devise related notices and flashes added to the application.
 
 Introduced Cloudinary for handling external media importing to the application (keeping the application size from expanding rapidly due to large media files).
+
+Nebula model expanded including new attributes and associations to new models also.
