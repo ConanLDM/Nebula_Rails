@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   root to: 'nebula#home'
 
   resources :nebula
+
+  get :thoughts, to: 'shared#thoughts'
 end

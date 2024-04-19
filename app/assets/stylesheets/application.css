@@ -23,3 +23,7 @@
   font-weight: 500;
   color: #333;
 }
+
+.active {
+  color: blue;
+}
