@@ -71,3 +71,33 @@
         </div>
       </div>
     </section>
+
+<div data-controller="popover" data-popover-url-value="<%= thoughts_path %>">
+  You can load popover with AJAX. For instance, this is my
+  <a href="/" data-action="mouseenter->popover#show mouseleave->popover#hide">profile card</a>
+</div>
+
+<div data-controller="popover" data-popover-target="trigger">
+  <%= link_to "Open Popover", "#", data: { action: "click->popover#toggle" } %>
+  <div data-popover-target="content" class="hidden">
+    <p>This is the popover content.</p>
+  </div>
+</div>
+
+<div data-controller="toggle" class="mt-5">
+  <button data-action="click->toggle#fire" class="btn btn-outline-primary">Add a new Nebula</button>
+  <div data-toggle-target="togglableElement" class="d-none">
+    <%= render "form", nebula: @nebula %>
+  </div>
+</div>
+
+<div data-controller="checkbox-select-all">
+  <input type="checkbox" id="all" name="all" value="all" data-checkbox-select-all-target="parent" data-action="change->checkbox-select-all#toggleChildren">
+  <label for="all"> Select all</label><br>
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" data-checkbox-select-all-target="child" data-action="change->checkbox-select-all#toggleParent">
+  <label for="vehicle1"> I have a bike</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" data-checkbox-select-all-target="child" data-action="change->checkbox-select-all#toggleParent">
+  <label for="vehicle2"> I have a car</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" data-checkbox-select-all-target="child" data-action="change->checkbox-select-all#toggleParent">
+  <label for="vehicle3"> I have a boat</label><br><br>
+</div>
