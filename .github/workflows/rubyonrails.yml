@@ -36,6 +36,7 @@ jobs:
         run: bin/rake
 
   lint:
+    name: Bundler Audit
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -45,4 +46,4 @@ jobs:
         with:
           bundler-cache: true
       - name: Security audit dependencies
-        run: bundler-audit --update
+        run: bundle exec bundler-audit --update
