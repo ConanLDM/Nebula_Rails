@@ -18,7 +18,6 @@ jobs:
           POSTGRES_DB: nebula_rails_test
           POSTGRES_USER: nebula_rails
           POSTGRES_PASSWORD: postgres
-        ports: ["5432:5432"]
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -36,14 +35,14 @@ jobs:
       - name: Run tests
         run: bin/rake
 
-  # lint:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Checkout code
-  #       uses: actions/checkout@v3
-  #     - name: Install Ruby and gems
-  #       uses: ruby/setup-ruby@v1
-  #       with:
-  #         bundler-cache: true
-  #     - name: Security audit dependencies
-  #       run: bin/bundler-audit --update
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install Ruby and gems
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - name: Security audit dependencies
+        run: bin/bundler-audit --update
