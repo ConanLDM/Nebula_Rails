@@ -45,4 +45,4 @@ jobs:
         with:
           bundler-cache: true
       - name: Security audit dependencies
-        run: bundle audit
+        run: bundler-audit --update
