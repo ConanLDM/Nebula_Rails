@@ -8,4 +8,7 @@ puts 'Locations generated'
   location.save!
 end
 
+Galaxy.create(name: 'Milky Way', size: 'Vast')
+Galaxy.create(name: 'Andromeda', size: 'Enormous')
+
 puts 'Seeding completed'
