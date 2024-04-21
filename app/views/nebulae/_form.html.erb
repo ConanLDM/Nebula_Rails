@@ -1,0 +1,15 @@
+<%= simple_form_for @nebula do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :distance %>
+  <%= f.number_field :distance %>
+
+  <%= f.label :brightness %>
+  <%= f.number_field :brightness %>
+
+  <%= f.label :galaxy %>
+  <%= f.association :galaxy %>
+
+  <%= f.submit 'Create Nebula' %>
+<% end %>
