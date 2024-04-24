@@ -30,6 +30,10 @@ class NebulaeController < ApplicationController
     render partial: 'shared/thoughts', locals: { user: @user }
   end
 
+  def about
+    @nebula = Nebula.all
+  end
+
   private
 
   def nebula_params

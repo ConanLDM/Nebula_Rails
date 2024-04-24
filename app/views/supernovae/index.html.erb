@@ -1,0 +1,13 @@
+<div class="container">
+  <%= turbo_frame_tag "first_turbo_frame" do %>
+  <div class="header">
+      <h1>Supernovae</h1>
+      <%= link_to "New Supernova",
+                  new_supernova_path,
+                  class: "btn btn--primary" %>
+    </div>
+  <% end %>
+
+  <%= render "supernova" %>
+
+</div>

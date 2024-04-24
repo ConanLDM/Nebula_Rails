@@ -5,6 +5,8 @@ class Nebula < ApplicationRecord
   attribute :distance, :float
   attribute :brightness, :integer
 
+  broadcasts_refreshes
+
   # Future method to implement
   def visible_from_earth?
     distance < 1000 # Determined threshold for visibility in km, for example Orion

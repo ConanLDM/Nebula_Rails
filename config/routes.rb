@@ -13,4 +13,11 @@ Rails.application.routes.draw do
   resources :nebulae
 
   get :thoughts, to: 'shared#thoughts'
+
+  get '/about', to: 'nebulae#about'
+
+  
+  resources :supernovae
+
+  get '/supernovae', to: 'supernovae#index', as: :supernovae_index
 end
