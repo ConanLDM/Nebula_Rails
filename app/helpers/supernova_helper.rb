@@ -1,0 +1,2 @@
+module SupernovaHelper
+end

@@ -1,0 +1,9 @@
+<div class="container">
+  <%= link_to sanitize("&larr; Back to supernova"), supernova_path(@supernova) %>
+
+  <div class="header">
+    <h1>Edit supernova</h1>
+  </div>
+
+  <%= render "form", supernova: @supernova %>
+</div>

@@ -1,0 +1,11 @@
+<div class="container">
+  <%= link_to sanitize("&larr; Back to supernovas"), supernovae_path %>
+
+  <div class="header">
+    <h1>New Supernova</h1>
+  </div>
+
+  <%= turbo_frame_tag "first_turbo_frame" do %>
+    <%= render "form", supernova: @supernova %>
+  <% end %>
+</div>

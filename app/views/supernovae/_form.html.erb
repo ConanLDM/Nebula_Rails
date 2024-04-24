@@ -1,0 +1,10 @@
+<%= simple_form_for supernova, html: { class: "supernova form" } do |f| %>
+  <% if supernova.errors.any? %>
+    <div class="error-message">
+      <%= supernova.errors.full_messages.to_sentence.capitalize %>
+    </div>
+  <% end %>
+
+  <%= f.input :name, input_html: { autofocus: true } %>
+  <%= f.submit class: "btn btn--secondary" %>
+<% end %>

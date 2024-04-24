@@ -1,0 +1,12 @@
+<div class="supernova">
+  <%= link_to @supernova.name, supernovae_path(@supernova) %>
+  <div class="supernova__actions">
+    <%= button_to "Delete",
+                  supernovae_path(@supernova),
+                  method: :delete,
+                  class: "btn btn--light" %>
+    <%= link_to "Edit",
+                edit_supernova_path(@supernova),
+                class: "btn btn--light" %>
+  </div>
+</div>
