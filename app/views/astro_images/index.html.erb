@@ -1,0 +1,10 @@
+<p><%= link_to 'Upload New Astro Image', new_astro_image_path %></p>
+
+<p>Images of Astrology from our Users</p>
+<% @astro_images.each do |image| %>
+  <div class="astro-image">
+    <%= image_tag image.image, alt: image.title %>
+    <p><strong><%= image.title %></strong></p>
+    <p><%= image.description %></p>
+  </div>
+<% end %>

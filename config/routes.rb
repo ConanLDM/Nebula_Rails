@@ -16,8 +16,11 @@ Rails.application.routes.draw do
 
   get '/about', to: 'nebulae#about'
 
-  
+
   resources :supernovae
 
   get '/supernovae', to: 'supernovae#index', as: :supernovae_index
+
+
+  resources :astro_images, only: [:index, :new, :create, :show]
 end
