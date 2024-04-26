@@ -21,3 +21,6 @@ Login screens along with Devise related notices and flashes added to the applica
 Introduced Cloudinary for handling external media importing to the application (keeping the application size from expanding rapidly due to large media files).
 
 Nebula model expanded including new attributes and associations to new models also.
+
+
+Added Astronomy Image MVC to the application, images of astronomy can be uploaded via users' (anyone signed in or not currently) locally (via Active Storage) and are then rendered in the Astronomy Images index view.
