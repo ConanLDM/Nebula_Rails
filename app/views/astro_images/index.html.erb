@@ -3,7 +3,7 @@
 <p>Images of Astrology from our Users</p>
 <% @astro_images.each do |image| %>
   <div class="astro-image">
-    <%= image_tag image.image, alt: image.title %>
+    <%= image_tag image.image, alt: image.title, loading: "lazy" %>
     <p><strong><%= image.title %></strong></p>
     <p><%= image.description %></p>
   </div>

@@ -1,0 +1,26 @@
+.astro-image {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.astro-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.astro-image p {
+  font-size: 14px;
+  color: #333;
+}
+
+.astro-images-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.astro-image:hover {
+  border-color: #0074d9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
