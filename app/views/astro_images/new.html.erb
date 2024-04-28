@@ -4,6 +4,9 @@
 
   <%= f.label :description %>
   <%= f.text_area :description %>
+  <% if @astro_image.errors[:description].any? %>
+    <p class="error-message"><%= @astro_image.errors.full_messages_for(:description).first %></p>
+  <% end %>
 
   <%= f.label :image %>
   <%= f.file_field :image %>
