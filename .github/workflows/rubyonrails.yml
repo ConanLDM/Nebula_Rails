@@ -8,8 +8,11 @@ name: "Ruby on Rails CI"
 on: [push]
 
 jobs:
-  test:
+
+  verify:
+    name: Build
     runs-on: ubuntu-latest
+
     services:
       postgres:
         image: postgres:11
@@ -18,6 +21,7 @@ jobs:
           POSTGRES_DB: nebula_rails_test
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
+        ports: ["5432:5432"]
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -40,7 +44,8 @@ jobs:
           POSTGRES_PASSWORD: postgres
           POSTGRES_USER: postgres
           RAILS_ENV: test
-        run: bundle exec rake db:setup
+      - name: Run tests
+        run: bundle exec rake
 
   lint:
     name: Bundler Audit
