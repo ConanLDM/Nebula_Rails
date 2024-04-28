@@ -12,11 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     services:
       postgres:
-        image: postgres:16
+        image: postgres:11
         env:
           PGHOST: localhost
           POSTGRES_DB: nebula_rails_test
-          POSTGRES_USER: nebula_rails
+          POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
         options: >-
           --health-cmd pg_isready
@@ -34,8 +34,14 @@ jobs:
         run: bin/rails db:schema:load
       - name: Run tests
         run: bin/rake
+      - name: setup databases
+        env:
+        POSTGRES_PASSWORD: postgres
+        POSTGRES_USER: postgres
+        RAILS_ENV: test
+        run: bundle exec rake db:setup
 
-  lint:
+        lint:
     name: Bundler Audit
     runs-on: ubuntu-latest
     steps:
