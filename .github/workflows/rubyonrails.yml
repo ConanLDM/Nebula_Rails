@@ -41,15 +41,14 @@ jobs:
         RAILS_ENV: test
         run: bundle exec rake db:setup
 
-        lint:
-    name: Bundler Audit
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-      - name: Install Ruby and gems
-        uses: ruby/setup-ruby@v1
-        with:
-          bundler-cache: true
-      - name: Security audit dependencies
-        run: bundle exec bundler-audit --update
+    lint:
+      name: Bundler Audit
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v3
+        - name: Install Ruby and gems
+          uses: ruby/setup-ruby@v1
+          with:
+            bundler-cache: true
+        - name: Security audit dependencies
+          run: bundle exec bundler-audit --update
