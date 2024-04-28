@@ -1,4 +1,4 @@
-# This workflow uses actions that are not certified by GitHub.  They are
+# This workflow uses actions that are not certified by GitHub. They are
 # provided by a third-party and are governed by separate terms of service,
 # privacy policy, and support documentation.
 #
@@ -36,19 +36,20 @@ jobs:
         run: bin/rake
       - name: setup databases
         env:
-        POSTGRES_PASSWORD: postgres
-        POSTGRES_USER: postgres
-        RAILS_ENV: test
+          PGHOST: localhost
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_USER: postgres
+          RAILS_ENV: test
         run: bundle exec rake db:setup
 
-    lint:
-      name: Bundler Audit
-      steps:
-        - name: Checkout code
-          uses: actions/checkout@v3
-        - name: Install Ruby and gems
-          uses: ruby/setup-ruby@v1
-          with:
-            bundler-cache: true
-        - name: Security audit dependencies
-          run: bundle exec bundler-audit --update
+  lint:
+    name: Bundler Audit
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install Ruby and gems
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - name: Security audit dependencies
+        run: bundle exec bundler-audit --update
