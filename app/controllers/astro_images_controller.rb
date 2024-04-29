@@ -17,6 +17,10 @@ class AstroImagesController < ApplicationController
     @astro_images = AstroImage.all
   end
 
+  def show
+    @astro_image = AstroImage.find(1)
+  end
+
   private
 
   def astro_image_params
