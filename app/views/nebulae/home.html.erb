@@ -11,6 +11,19 @@
 
 <%= link_to 'Supernovae Index', supernovae_index_path %>
 
+<div class="calendar-container">
+  <%= month_calendar(events: @meetings, end_attribute: :end_time) do |date, meetings| %>
+    <%= date %>
+
+    <% meetings.each do |meeting| %>
+      <div class="meeting">
+        <p><%= meeting.name %></p>
+        <small><%= meeting.time unless meeting.multi_days? %></small>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
 <div data-controller="reveal" data-reveal-hidden-class="d-none">
   <button data-action="click->reveal#toggle" type="button" class="btn">Toggle me!</button>
 
