@@ -73,6 +73,8 @@ gem 'activeadmin'
 # Resolves sassc Rails error
 gem "sassc-rails"
 
+# Calendar gem implementation
+gem "simple_calendar"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
