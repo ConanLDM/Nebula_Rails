@@ -76,6 +76,9 @@ gem "sassc-rails"
 # Calendar gem implementation
 gem "simple_calendar"
 
+# Accurate current and history timezones for Ruby.
+gem 'timezone', '~> 1.0'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
