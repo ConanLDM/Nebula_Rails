@@ -29,9 +29,6 @@ gem "tailwindcss-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
-# Use Redis adapter to run Action Cable in production
-gem "redis", ">= 4.0.1"
-
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
@@ -78,6 +75,12 @@ gem "simple_calendar"
 
 # Accurate current and history timezones for Ruby.
 gem 'timezone', '~> 1.0'
+
+# For broadcasting and streaming
+gem "anycable-rails", "~> 1.5"
+
+# For compatability with AnyCable
+gem 'redis', '~> 5.2'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
