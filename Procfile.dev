@@ -1,2 +1,5 @@
 web: bin/rails server
 css: bin/rails tailwindcss:watch
+rpc: bundle exec anycable
+ws: bin/anycable-go --port=8080
+anycable: bundle exec anycable

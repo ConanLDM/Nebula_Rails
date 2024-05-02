@@ -40,3 +40,4 @@
 
 # Ignore Yarn errors as unnecessary to upload to the GitHub repository
 yarn-error.log
+bin/dist
